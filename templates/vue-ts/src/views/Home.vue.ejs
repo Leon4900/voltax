@@ -1,0 +1,20 @@
+<script setup lang="ts">
+<% if (!components) { -%>
+import CustomComponents from '@/components/CustomComponents.vue'
+<% } -%>
+</script>
+
+<template>
+    <div class="<%= tailwind ? 'text-[red]' : 'home' %>">
+        首页
+    </div>
+    <CustomComponents />
+</template>
+
+<style scoped>
+<% if (!tailwind) { -%>
+.home {
+    color: red;
+}
+<% } -%>
+</style>

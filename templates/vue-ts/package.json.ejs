@@ -1,0 +1,33 @@
+{
+  "name": "<%= projectName %>",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build-staging": "vite build --mode staging",
+    "build-check": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "<%= v('vue') %>"<% if (router) { %>,
+    "vue-router": "<%= v('vue-router') %>"<% } %><% if (pinia) { %>,
+    "pinia": "<%= v('pinia') %>",
+    "pinia-plugin-persistedstate": "<%= v('pinia-plugin-persistedstate') %>"<% } %>
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "<%= v('@vitejs/plugin-vue') %>",
+    "@vue/tsconfig": "<%= v('@vue/tsconfig') %>",
+    "@types/node": "<%= v('@types/node') %>",
+    "typescript": "<%= v('typescript') %>",
+    "vue-tsc": "<%= v('vue-tsc') %>",
+    "vite": "<%= v('vite') %>"<% if (tailwind) { %>,
+    "tailwindcss": "<%= v('tailwindcss') %>",
+    "@tailwindcss/vite": "<%= v('@tailwindcss/vite') %>"<% } %><% if (autoImport) { %>,
+    "unplugin-auto-import": "<%= v('unplugin-auto-import') %>"<% } %><% if (components) { %>,
+    "unplugin-vue-components": "<%= v('unplugin-vue-components') %>"<% } %><% if (svgIcons) { %>,
+    "vite-plugin-svg-icons": "<%= v('vite-plugin-svg-icons') %>",
+    "fast-glob": "<%= v('fast-glob') %>"<% } %>
+  }
+}

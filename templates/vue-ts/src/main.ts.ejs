@@ -1,0 +1,22 @@
+import { createApp } from 'vue'
+import '@/styles/main.css'
+<% if (svgIcons) { -%>
+import 'virtual:svg-icons-register'
+<% } -%>
+import App from './App.vue'
+<% if (router) { -%>
+import router from '@/router'
+<% } -%>
+<% if (pinia) { -%>
+import pinia from '@/store'
+<% } -%>
+
+const app = createApp(App)
+<% if (router) { -%>
+app.use(router)
+<% } -%>
+<% if (pinia) { -%>
+app.use(pinia)
+<% } -%>
+
+app.mount('#app')

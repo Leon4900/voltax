@@ -1,0 +1,13 @@
+<script setup lang="ts">
+<% if (!router) { -%>
+import Home from '@/views/Home.vue'
+<% } -%>
+</script>
+
+<template>
+<% if (router) { -%>
+  <router-view></router-view>
+<% } else { -%>
+  <Home />
+<% } -%>
+</template>
