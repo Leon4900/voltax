@@ -2,6 +2,8 @@
 
 > Vue3 + Vite 项目脚手架 CLI，交互式选择 TypeScript / Vue Router / Pinia / ESLint / Tailwind CSS 等，一条命令生成开箱即用的工程。
 
+仓库地址：https://github.com/Leon4900/voltax
+
 ## 安装
 
 全局安装：
